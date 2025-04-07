@@ -1,4 +1,4 @@
-import { ImageBackground, View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, ScrollView } from "react-native";
+import { ImageBackground, View, Text, TouchableOpacity, StyleSheet, Dimensions, ScrollView } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Icons from "./Icons";
 
