@@ -1,4 +1,4 @@
-import { ImageBackground, View, Text, TouchableOpacity, StyleSheet, Dimensions, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions, ScrollView } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Icons from "./Icons";
 
@@ -8,7 +8,6 @@ const Rules = () => {
     const navigation = useNavigation();
 
     return (
-        <ImageBackground source={require('../assets/back/3.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <TouchableOpacity 
@@ -35,7 +34,6 @@ const Rules = () => {
                 </ScrollView>
 
             </View>
-        </ImageBackground>
     )
 };
 

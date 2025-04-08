@@ -1,19 +1,10 @@
-import { View } from "react-native"
 import DragonGame from "../components/DragonGame"
+import Screen from "../components/Screen";
 
 const DragonGameScreen = () => {
     return (
-        <View style={styles.container}>
-            <DragonGame />
-        </View>
+        <Screen child={<DragonGame />} middle />
     )
-}; 
-
-const styles = {
-    container: {
-        width: "100%",
-        height: "100%",
-    }
-}
+};
 
 export default DragonGameScreen;

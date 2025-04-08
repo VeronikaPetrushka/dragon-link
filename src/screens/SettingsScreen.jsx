@@ -1,19 +1,10 @@
-import { View } from "react-native"
 import Settings from "../components/Settings"
+import Screen from "../components/Screen";
 
 const SettingsScreen = () => {
     return (
-        <View style={styles.container}>
-            <Settings />
-        </View>
+        <Screen child={<Settings />} middle />
     )
-}; 
-
-const styles = {
-    container: {
-        width: "100%",
-        height: "100%",
-    }
-}
+};
 
 export default SettingsScreen;

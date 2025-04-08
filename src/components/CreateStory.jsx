@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { ImageBackground, View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, TextInput, ScrollView } from "react-native";
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, TextInput, ScrollView } from "react-native";
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Icons from "./Icons";
@@ -102,7 +102,6 @@ const CreateStory = ({ story }) => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <TouchableOpacity 
@@ -195,7 +194,6 @@ const CreateStory = ({ story }) => {
                 </ScrollView>
 
             </View>
-        </ImageBackground>
     )
 };
 

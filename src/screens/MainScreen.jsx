@@ -1,19 +1,10 @@
-import { View } from "react-native"
 import Main from "../components/Main"
+import Screen from "../components/Screen";
 
 const MainScreen = () => {
     return (
-        <View style={styles.container}>
-            <Main />
-        </View>
+        <Screen child={<Main />} full />
     )
-}; 
-
-const styles = {
-    container: {
-        width: "100%",
-        height: "100%",
-    }
-}
+};
 
 export default MainScreen;

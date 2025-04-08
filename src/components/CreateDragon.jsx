@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ImageBackground, View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, TextInput, ScrollView } from "react-native";
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, TextInput, ScrollView } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { launchImageLibrary } from 'react-native-image-picker';
 import { useNavigation } from '@react-navigation/native';
@@ -354,7 +354,6 @@ const CreateDragon = ({ dragon }) => {
     };
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 {
@@ -612,7 +611,6 @@ const CreateDragon = ({ dragon }) => {
                 </View>
 
             </View>
-        </ImageBackground>
     )
 };
 

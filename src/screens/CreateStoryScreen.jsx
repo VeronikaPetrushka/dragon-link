@@ -1,21 +1,12 @@
-import { View } from "react-native"
 import CreateStory from "../components/CreateStory"
+import Screen from "../components/Screen";
 
 const CreateStoryScreen = ({ route }) => {
     const { story } = route.params || {};
 
     return (
-        <View style={styles.container}>
-            <CreateStory story={story} />
-        </View>
+        <Screen child={<CreateStory story={story} />} middle />
     )
 }; 
-
-const styles = {
-    container: {
-        width: "100%",
-        height: "100%",
-    }
-}
 
 export default CreateStoryScreen;

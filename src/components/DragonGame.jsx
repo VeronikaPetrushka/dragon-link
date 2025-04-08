@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ImageBackground, View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView, TextInput, Modal } from "react-native";
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView, TextInput, Modal } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import dragonGame from '../constants/dragonGame';
 import Icons from "./Icons";
@@ -169,7 +169,6 @@ const DragonGame = () => {
     }
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 {
@@ -248,18 +247,23 @@ const DragonGame = () => {
                                         )}
                                     </View>
                                 ))}
+                                <View style={{height: 550}} />
                             </ScrollView>   
-
-                            <TouchableOpacity 
-                                style={[styles.button, {marginTop: 12}]} 
-                                onPress={() => setStarted(true)}
-                                disabled={!selectedCategory || !teams}
-                                >
-                                <Image source={(selectedCategory && teams) ? require('../assets/buttons/start-red.png') : require('../assets/buttons/start-grey.png')} style={styles.image} />
-                            </TouchableOpacity>      
                         </View>
                     )
-                }
+            }
+            
+            {
+                (!started && !finished) && (
+                    <TouchableOpacity 
+                        style={[styles.button, {position: 'absolute', bottom: 40}]} 
+                        onPress={() => setStarted(true)}
+                        disabled={!selectedCategory || !teams}
+                        >
+                        <Image source={(selectedCategory && teams) ? require('../assets/buttons/start-red.png') : require('../assets/buttons/start-grey.png')} style={styles.image} />
+                    </TouchableOpacity>      
+                )
+            }
 
                 {(started && countdown > 0 && !finished) && (
                     <View style={{width: '100%', alignItems: 'center', justifyContent: 'center', flexGrow: 1}}>
@@ -336,7 +340,6 @@ const DragonGame = () => {
                 </Modal>
 
             </View>
-        </ImageBackground>
     )
 };
 

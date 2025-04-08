@@ -1,19 +1,10 @@
-import { View } from "react-native"
 import Rules from "../components/Rules"
+import Screen from "../components/Screen";
 
 const RulesScreen = () => {
     return (
-        <View style={styles.container}>
-            <Rules />
-        </View>
+        <Screen child={<Rules />} plain />
     )
-}; 
-
-const styles = {
-    container: {
-        width: "100%",
-        height: "100%",
-    }
-}
+};
 
 export default RulesScreen;

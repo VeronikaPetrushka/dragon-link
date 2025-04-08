@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ImageBackground, View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, Linking, Switch, Share, Modal } from "react-native";
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, Linking, Switch, Share, Modal, Alert } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { useMusic } from '../constants/music';
 import Icons from "./Icons";
@@ -20,7 +20,7 @@ const Settings = () => {
         try {
             const result = await Share.share({
             title: "Forge Your Dragon!",
-            message: "https://yourappdownloadlink.com", //change
+            message: "https://apps.apple.com/us/app/forge-your-dragon/id6744359142",
             });
 
         } catch (error) {
@@ -28,10 +28,9 @@ const Settings = () => {
         }
     };
 
-    // change
     const seeTerms = () => {
-        Linking.openURL('https://yourwebsite.com/privacy-policy').catch((err) =>
-            Alert.alert("Error", "Unable to open Privacy Policy")
+        Linking.openURL('https://www.termsfeed.com/live/49ede9fc-71d1-4c34-b91a-5d73f75d66d6').catch((err) =>
+            Alert.alert("Error", "Try again later")
         );
     };
 
@@ -39,15 +38,14 @@ const Settings = () => {
         try {
             await AsyncStorage.removeItem('dragons');
             await AsyncStorage.removeItem('stories');
-            Alert.alert("Success", "Entire data has been reset.");
+            Alert.alert("Success", "All stories and dragons have been deleted.");
         } catch (error) {
-            console.error("Failed to reset data", error);
-            Alert.alert("Error", "Failed to reset data.");
+            console.error("Failed to reset dragons data", error);
+            Alert.alert("Error", "Failed to reset dragons data.");
         }
     };
 
     return (
-        <ImageBackground source={require('../assets/back/2.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <TouchableOpacity 
@@ -126,7 +124,6 @@ const Settings = () => {
                 </Modal>
 
             </View>
-        </ImageBackground>
     )
 };
 

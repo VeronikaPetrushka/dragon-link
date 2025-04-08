@@ -1,4 +1,4 @@
-import { ImageBackground, View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, ScrollView, Share } from "react-native";
+import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, ScrollView, Share } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Icons from "./Icons";
 
@@ -24,7 +24,6 @@ const StoryDetails = ({ story }) => {
     };    
 
     return (
-        <ImageBackground source={require('../assets/back/3.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <TouchableOpacity 
@@ -86,7 +85,6 @@ const StoryDetails = ({ story }) => {
                 </ScrollView>
 
             </View>
-        </ImageBackground>
     )
 };
 

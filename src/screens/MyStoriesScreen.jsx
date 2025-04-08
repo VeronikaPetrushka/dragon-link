@@ -1,19 +1,10 @@
-import { View } from "react-native"
 import MyStories from "../components/MyStories"
+import Screen from "../components/Screen";
 
 const MyStoriesScreen = () => {
     return (
-        <View style={styles.container}>
-            <MyStories />
-        </View>
+        <Screen child={<MyStories />} middle />
     )
-}; 
-
-const styles = {
-    container: {
-        width: "100%",
-        height: "100%",
-    }
-}
+};
 
 export default MyStoriesScreen;

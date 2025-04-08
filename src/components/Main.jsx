@@ -1,4 +1,4 @@
-import { ImageBackground, View, TouchableOpacity, Image, StyleSheet, Dimensions } from "react-native";
+import { View, TouchableOpacity, Image, StyleSheet, Dimensions } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
 const { height } = Dimensions.get('window');
@@ -7,7 +7,6 @@ const Main = () => {
     const navigation = useNavigation();
 
     return (
-        <ImageBackground source={require('../assets/back/1.png')} style={{flex: 1}}>
             <View style={styles.container}>
 
                 <View style={{height: height * 0.4}} />
@@ -29,7 +28,6 @@ const Main = () => {
                 </TouchableOpacity>
 
             </View>
-        </ImageBackground>
     )
 };
 
