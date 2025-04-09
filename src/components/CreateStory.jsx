@@ -76,7 +76,7 @@ const CreateStory = ({ story }) => {
 
             for (const key in newStory) {
                 if (!newStory[key]) {
-                    console.error(`Field ${key} must be filled!`);
+                    alert(`Field ${key} must be filled!`);
                     return;
                 }
             }

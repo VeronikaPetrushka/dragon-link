@@ -328,7 +328,7 @@ const CreateDragon = ({ dragon }) => {
 
             for (const key in newDragon) {
                 if (!newDragon[key]) {
-                    console.error(`Field ${key} must be filled!`);
+                    alert('All fields must be filled!');
                     return;
                 }
             }
